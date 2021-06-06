@@ -1,6 +1,7 @@
 import { installVstsAuth } from '../utils/connectToFeed';
 import { STEPS, getStepsDetails } from '../consts/steps.consts';
 import createLibraryModule from '../utils/createLibrary.js';
+import { tryCatchWrapper } from '../utils/tryCatch';
 
 export const useStartProject = (name, packageManager, setLoadingMsg, updateSteps, setCompleted, exit) => {
 
@@ -19,8 +20,7 @@ export const useStartProject = (name, packageManager, setLoadingMsg, updateSteps
 		setLoadingMsg('Setting connection to feed')
 		const os = process.platform
 		if (os === 'win32') {
-			await installVstsAuth()
-			updateSteps(getStepsDetails(STEPS.NPMRC))
+			await tryCatchWrapper(installVstsAuth, undefined, updateSteps, STEPS.NPMRC)
 			setLoadingMsg(undefined)
 		} else {
 			updateSteps(getStepsDetails(STEPS.NPMRC, false, 'You are not a Windows user. Please check how to connect to the Azure feed here: https://docs.microsoft.com/en-us/azure/devops/artifacts/npm/npmrc?view=azure-devops#set-up-authentication-on-your-dev-box'))
@@ -30,14 +30,12 @@ export const useStartProject = (name, packageManager, setLoadingMsg, updateSteps
 
 	const createDir = async () => {
 		setLoadingMsg('Creating directory')
-		const opts = await createLibraryModule.createDir(promptDetails)
-		updateSteps(getStepsDetails(STEPS.MAKE_DIR, true, `Created directory ${promptDetails.name}`))
-		return opts
+		return await tryCatchWrapper(createLibraryModule.createDir, promptDetails, updateSteps, STEPS.MAKE_DIR)
 	}
 
 	const copyTemplate = async ({files, source, dest, info}) => {
 		setLoadingMsg('Copying template')
-		const promises = files.map(async (file) => await createLibraryModule.copyTemplate({
+		const promises = files.map(async (file) => await tryCatchWrapper(createLibraryModule.copyTemplate, {
 			file,
 			source,
 			dest,
