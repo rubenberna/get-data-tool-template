@@ -1,0 +1,157 @@
+@font-face {
+  font-family: VolvoNovum;
+  src: url('./assets/fonts/VolvoNovum-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: VolvoNovum;
+  src: url('./assets/fonts/VolvoNovum-Medium.woff') format('woff');
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: VolvoNovum;
+  src: url('./assets/fonts/VolvoNovum-Light.woff') format('woff');
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: VolvoNovum;
+  src: url('./assets/fonts/VolvoNovum-Italic.woff') format('woff');
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: VolvoBradPro;
+  src: url('./assets/fonts/VolvoBroadPro.woff') format('woff');
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+:root {
+  --dark-blue: #202A44;
+  --white: #FFFFFF;
+  --primary: #555BFF;
+  --green: #1FC11B;
+  --yellow: #FFD913;
+  --red: #FF5555;
+  --orange: #FF9C55;
+  --grey-four: #53565A;
+
+  --font-large: 2rem;
+  --font-regular: 1.4rem;
+}
+
+html {
+  font-size: 62.5% !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--grey-four);
+}
+
+.fonts-loaded body {
+  font-family: VolvoNovum, sans-serif;
+}
+
+main {
+  margin-left: 16rem; /* Same as the width of the sidenav */
+  position: relative;
+}
+
+.sidenav {
+  height: 100%;
+  width: 16rem;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: var(--dark-blue);
+  color: var(--white);
+  overflow-x: hidden;
+  padding-top: 2rem;
+  text-align: center;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.sidenav-title {
+  font-family: VolvoBradPro, sans-serif;
+  font-size: 4rem;
+  color: #FFFFFF;
+}
+
+.sidenav-sub-title {
+  font-size: var(--font-large);
+  margin-bottom: 2rem;
+}
+
+.sidenav-icon {
+  width: 6rem;
+  margin: 0 auto;
+}
+
+@media screen and (max-height: 45rem) {
+  .sidenav {padding-top: 1.5rem;}
+  .sidenav a {font-size: 1.8rem;}
+}
+
+.card {
+  background-color: var(--white);
+  display: block;
+  width: 35rem;
+  min-height: 15rem;
+  border: 3px solid var(--primary);
+  padding: 1.5rem;
+  margin: calc(50vh - 3rem) auto 0 auto;
+  box-shadow: 10px -10px 0 -3px var(--white), 10px -10px var(--green),
+  20px -20px 0 -3px var(--white), 20px -20px var(--yellow),
+  30px -30px 0 -3px var(--white), 30px -30px var(--orange),
+  40px -40px 0 -3px var(--white), 40px -40px var(--red);
+  transition: box-shadow 1s, top 1s, left 1s;
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  color: var(--primary);
+}
+
+.card:hover {
+  top: -40px;
+  left: 40px;
+  box-shadow: 0 0 0 -3px var(--white), 0 0 0 0 var(--green),
+  0 0 0 -3px var(--white), 0 0 0 0  var(--yellow),
+  0 0 0 -3px var(--white), 0 0 0 0  var(--orange),
+  0 0 0 -3px  var(--white), 0 0 0 0  var(--red);
+}
+
+.card-title {
+  display: block;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.card-description {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+
+

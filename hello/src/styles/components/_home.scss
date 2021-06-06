@@ -1,0 +1,23 @@
+.dt-main {
+  height: 90vh;
+  padding: 3rem;
+  font-size: 1.6rem;
+  font-family: VolvoNovum, sans-serif;
+
+  &__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &__title {
+      font-family: VolvoBradPro, sans-serif;
+      display: block;
+      font-size: 3rem;
+    }
+  }
+}
+
+

@@ -1,0 +1,22 @@
+{
+	"commands": [
+		{
+			"description": "Name your project command",
+			"positionalArgs": [],
+			"args": [
+				{
+					"key": "name",
+					"type": "string",
+					"description": "Name of your project",
+					"isRequired": true,
+					"aliases": [],
+					"positional": false
+				}
+			],
+			"isIndex": true,
+			"name": "*",
+			"path": "index.js",
+			"subCommands": []
+		}
+	]
+}
