@@ -9,21 +9,21 @@ export const SuccessMsg = ({name, packageManager, completed}) => {
         completed &&
         <Box borderStyle="round" borderColor="green" width={40} padding={2}>
           <Text>
-            <Text italic>To start your project:</Text>
+            <Text italic>To install your project:</Text>
             <Newline/>
             <Text>cd <Text color="green" bold>{name}</Text></Text>
             <Newline />
             <Text color="green" bold>{packageManager} install</Text>
 						<Newline />
 						<Newline />
-						<Text>cd example</Text>
+						<Text>cd <Text color="green" bold>example</Text></Text>
 						<Newline />
 						<Text color="green" bold>{packageManager} install</Text>
 						<Newline/>
 						<Newline/>
             <Text>To run your project:</Text>
 						<Newline />
-						<Text color="green" bold>{packageManager} start</Text>
+						<Text>From the project root -- <Text color="green" bold>{packageManager} start</Text></Text>
             <Newline />
             <Newline />
             <Text italic>To publish your project:</Text>

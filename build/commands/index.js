@@ -237,22 +237,25 @@ const SuccessMsg = ({
     padding: 2
   }, /*#__PURE__*/_react.default.createElement(_ink.Text, null, /*#__PURE__*/_react.default.createElement(_ink.Text, {
     italic: true
-  }, "To start your project:"), /*#__PURE__*/_react.default.createElement(_ink.Newline, null), /*#__PURE__*/_react.default.createElement(_ink.Text, null, "cd ", /*#__PURE__*/_react.default.createElement(_ink.Text, {
-    color: "#006064",
+  }, "To install your project:"), /*#__PURE__*/_react.default.createElement(_ink.Newline, null), /*#__PURE__*/_react.default.createElement(_ink.Text, null, "cd ", /*#__PURE__*/_react.default.createElement(_ink.Text, {
+    color: "green",
     bold: true
   }, name)), /*#__PURE__*/_react.default.createElement(_ink.Newline, null), /*#__PURE__*/_react.default.createElement(_ink.Text, {
-    color: "#006064",
+    color: "green",
     bold: true
-  }, packageManager, " install"), /*#__PURE__*/_react.default.createElement(_ink.Newline, null), /*#__PURE__*/_react.default.createElement(_ink.Newline, null), /*#__PURE__*/_react.default.createElement(_ink.Text, null, "cd example"), /*#__PURE__*/_react.default.createElement(_ink.Newline, null), /*#__PURE__*/_react.default.createElement(_ink.Text, {
-    color: "#006064",
+  }, packageManager, " install"), /*#__PURE__*/_react.default.createElement(_ink.Newline, null), /*#__PURE__*/_react.default.createElement(_ink.Newline, null), /*#__PURE__*/_react.default.createElement(_ink.Text, null, "cd ", /*#__PURE__*/_react.default.createElement(_ink.Text, {
+    color: "green",
     bold: true
-  }, packageManager, " install"), /*#__PURE__*/_react.default.createElement(_ink.Newline, null), /*#__PURE__*/_react.default.createElement(_ink.Newline, null), /*#__PURE__*/_react.default.createElement(_ink.Text, null, "To run your project:"), /*#__PURE__*/_react.default.createElement(_ink.Newline, null), /*#__PURE__*/_react.default.createElement(_ink.Text, {
-    color: "#006064",
+  }, "example")), /*#__PURE__*/_react.default.createElement(_ink.Newline, null), /*#__PURE__*/_react.default.createElement(_ink.Text, {
+    color: "green",
     bold: true
-  }, packageManager, " start"), /*#__PURE__*/_react.default.createElement(_ink.Newline, null), /*#__PURE__*/_react.default.createElement(_ink.Newline, null), /*#__PURE__*/_react.default.createElement(_ink.Text, {
+  }, packageManager, " install"), /*#__PURE__*/_react.default.createElement(_ink.Newline, null), /*#__PURE__*/_react.default.createElement(_ink.Newline, null), /*#__PURE__*/_react.default.createElement(_ink.Text, null, "To run your project:"), /*#__PURE__*/_react.default.createElement(_ink.Newline, null), /*#__PURE__*/_react.default.createElement(_ink.Text, null, "From the project root -- ", /*#__PURE__*/_react.default.createElement(_ink.Text, {
+    color: "green",
+    bold: true
+  }, packageManager, " start")), /*#__PURE__*/_react.default.createElement(_ink.Newline, null), /*#__PURE__*/_react.default.createElement(_ink.Newline, null), /*#__PURE__*/_react.default.createElement(_ink.Text, {
     italic: true
   }, "To publish your project:"), /*#__PURE__*/_react.default.createElement(_ink.Newline, null), /*#__PURE__*/_react.default.createElement(_ink.Text, {
-    color: "#006064",
+    color: "green",
     bold: true
   }, packageManager, " publish"), /*#__PURE__*/_react.default.createElement(_ink.Newline, null), /*#__PURE__*/_react.default.createElement(_ink.Newline, null), /*#__PURE__*/_react.default.createElement(_ink.Text, {
     italic: true
