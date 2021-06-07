@@ -1,6 +1,6 @@
 {
 	"name": "get-data-tool-template",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"license": "MIT",
 	"bin": "./build/cli.js",
 	"engines": {
