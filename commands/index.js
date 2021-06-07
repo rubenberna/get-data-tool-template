@@ -9,12 +9,13 @@ import { useStartProject } from '../hooks/useStartProject';
 import { getStepsDetails, STEPS } from '../consts/steps.consts';
 
 /// Name your project command
-const App = ({name}) => {
+const App = ({inputArgs}) => {
 	const {exit} = useApp();
 	const [packageManager, setPackageManager] = useState(undefined);
 	const [loadingMsg, setLoadingMsg] = useState(undefined);
 	const [steps, setSteps] = useState([]);
 	const [completed, setCompleted] = useState(false);
+	const name = inputArgs[0]
 
 	const updateSteps = (newStep) => {
 		setSteps(previousSteps => [
@@ -49,7 +50,7 @@ const App = ({name}) => {
 
 App.propTypes = {
 	/// Name of your project
-	name: PropTypes.string.isRequired
+	inputArgs: PropTypes.array
 };
 
 export default App;

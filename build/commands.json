@@ -5,10 +5,10 @@
 			"positionalArgs": [],
 			"args": [
 				{
-					"key": "name",
-					"type": "string",
+					"key": "inputArgs",
+					"type": "array",
 					"description": "Name of your project",
-					"isRequired": true,
+					"isRequired": false,
 					"aliases": [],
 					"positional": false
 				}
