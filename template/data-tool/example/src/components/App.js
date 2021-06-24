@@ -1,22 +1,25 @@
-import React, { Suspense, lazy } from 'react'
+import React, { Suspense, lazy, useState } from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import { metadata } from '{{name}}'
+import { useNotification } from '../utils/_useNotification';
+import { metadata } from 'data-tool-template'
 import { Home } from './Home';
-import { SideNav } from '../SideNav';
+import { SideNav } from './SideNav';
 import { convertToKebabCase } from '../utils/_general.util';
-import '{{name}}/dist/index.css'
+import 'data-tool-template/dist/index.css'
 
-const Component = lazy(() => import('{{name}}'))
-
-const dummyState = {
-  isAuthenticated: true,
-  token: '-',
-  username: 'Ruben Bernardes (consultant)',
-  role: 'admin',
-  errorMessage: ''
-}
+const Component = lazy(() => import('data-tool-template'))
 
 const App = () => {
+  const [locale, setLocale] = useState('en')
+  const { addNotification, closeNotification } = useNotification()
+
+  const dummyState = {
+    locale,
+    changeLocale: setLocale,
+    idToken: "-",
+    addNotification,
+    closeNotification
+  }
 
   const exampleComponentLink = `/${convertToKebabCase(metadata.title)}`
 

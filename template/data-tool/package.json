@@ -1,6 +1,6 @@
 {
-  "name": "{{name}}",
-  "version": "1.0.0",
+  "name": "vfs-data-tool-template",
+  "version": "0.0.0",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.js",
@@ -9,9 +9,7 @@
   },
   "scripts": {
     "build": "microbundle-crl --css-modules false --no-compress --format modern,cjs",
-    "start-workbench": "npm start --prefix example",
-    "start-data-tool": "wait-on microbundle-crl --css-modules false watch --no-compress --format modern,cjs",
-    "start": "concurrently -k -s first \"npm run start-data-tool\" \"npm run start-workbench\"",
+    "start": "microbundle-crl --css-modules false watch --no-compress --format modern,cjs",
     "prepare": "run-s build",
     "test": "run-s test:unit test:lint test:build",
     "test:build": "run-s build",
@@ -19,7 +17,7 @@
     "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
     "publish": "npm publish",
-    "predeploy": "cd example && {{manager}} install && {{manager}} run build"
+    "predeploy": "cd example &&  install &&  run build"
   },
   "peerDependencies": {
     "react": "^16.0.0"
@@ -27,6 +25,10 @@
   "devDependencies": {
     "babel-eslint": "^10.0.3",
     "cross-env": "^7.0.2",
+    "eslint": "^6.8.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-react": "^7.24.0",
     "microbundle-crl": "^0.13.10",
     "npm-run-all": "^4.1.5",
     "react": "^16.13.1",
@@ -39,6 +41,8 @@
   ],
   "dependencies": {
     "concurrently": "^6.2.0",
-    "node-sass": "^6.0.0"
+    "node-sass": "^6.0.0",
+    "react-intl": "^5.20.1",
+    "vfs-msal-auth": "1.0.15"
   }
 }

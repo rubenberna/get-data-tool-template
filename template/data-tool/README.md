@@ -12,14 +12,14 @@ Npm package template that can be imported to the Data Platform feed.
 - it has an easy-to-follow structure
 
 
-## Install
+## Start
 
 ```bash
 yarn install && yarn start
 cd example && yarn install && yarn start
 ```
 
-## Usage (develop package) -- NOT TO BE CHANGED!!
+## Usage (develop package)
 
 ```jsx
 import React from "react";
@@ -58,7 +58,7 @@ App.propTypes = {
 };
 ```
 
-## Usage (import package)
+## Usage (import package) -- NOT TO BE CHANGED!!
 
 ```jsx
 import React, { Suspense, lazy } from 'react'

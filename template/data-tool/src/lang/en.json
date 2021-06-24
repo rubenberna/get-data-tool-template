@@ -1,0 +1,8 @@
+{
+  "app.title":"Example Component in: ",
+  "app.subtitle":"What are you going to build?",
+  "changeLocale": {
+    "success": "Language changed",
+    "error": "Something went wrong"
+  }
+}

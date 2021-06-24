@@ -10,11 +10,12 @@
     "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject"
   },
   "dependencies": {
-    "react": "{{#if yarn}}link:..{{else}}file:..{{/if}}/node_modules/react",
+    "data-tool-template": "link:..",
+    "react": "link:../node_modules/react",
+    "react-dom": "link:../node_modules/react-dom",
+    "react-intl": "^5.20.1",
     "react-router-dom": "^5.2.0",
-    "react-dom": "{{#if yarn}}link:..{{else}}file:..{{/if}}/node_modules/react-dom",
-    "react-scripts": "{{#if yarn}}link:..{{else}}file:..{{/if}}/node_modules/react-scripts",
-    "{{name}}": "{{#if yarn}}link:..{{else}}file:..{{/if}}"
+    "react-scripts": "link:../node_modules/react-scripts"
   },
   "devDependencies": {
     "@babel/plugin-syntax-object-rest-spread": "^7.8.3"

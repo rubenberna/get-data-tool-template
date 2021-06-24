@@ -1,0 +1,8 @@
+{
+  "app.title":"Voorbeeld component in: ",
+  "app.subtitle": "Wat ga je maken?",
+  "changeLocale": {
+    "success": "Taal gewijzigd",
+    "error": "Er is iets fout gegaan"
+  }
+}
